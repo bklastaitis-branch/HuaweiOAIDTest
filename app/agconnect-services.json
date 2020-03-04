@@ -1,0 +1,12 @@
+{
+	"client":{
+		"cp_id":"890001000024106482",
+		"product_id":"9105385871708464498",
+		"client_id":"296530472257717440",
+		"client_secret":"C54C51AA5A5EF0B602558C956D85B7839404C0D309708DC591832B1347AB277A",
+		"app_id":"101720081",
+		"package_name":"com.branch.example.android.huaweioaidtest",
+		"api_key":"CV5tMdd1tiQEJ/mAozTMEH7/FVM3kapPEoXZzMwWYocs/ZG4qVTf+RC5NzKlKD61js8QzID4HR92K8pS6d+zoMX1LoIg"
+	},
+	"configuration_version":"1.0"
+}

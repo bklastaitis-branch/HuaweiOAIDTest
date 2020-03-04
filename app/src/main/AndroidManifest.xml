@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.branch.example.android.huaweioaidtest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.branch.example.android.huaweioaidtest.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+<!--    android:usesCleartextTraffic="true" should be here if we are testing full ads lib integration    -->
+        <activity android:name="com.branch.example.android.huaweioaidtest.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="branchsters" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="branchster.app.link"
+                    android:scheme="https"/>
+                <data
+                    android:host="branchster.app.link"
+                    android:scheme="http"/>
+            </intent-filter>
+        </activity>
+
+<!--        for full ads lib-->
+<!--        <activity android:name="com.huawei.openalliance.ad.activity.PPSLauncherActivity"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
+<!--                <data android:scheme="hwpps" android:host="com.branch.example.android.huaweioaidtest"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false"/> <!-- Set to true to use Branch_Test_Key -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL"/>
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_jpAAsHxzDjint6I30mkBZjeewAki21R7"/>
+
+    </application>
+
+</manifest>
